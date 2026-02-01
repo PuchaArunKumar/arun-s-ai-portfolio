@@ -53,11 +53,23 @@ const Experience = () => {
                       <h3 className="text-xl md:text-2xl font-bold">Machine Learning Engineer Intern</h3>
                       <p className="text-primary font-medium">Aegion Dynamic Solutions</p>
                     </div>
-                    <div className="flex flex-col text-sm text-muted-foreground">
+                    <div className="flex flex-col text-sm text-muted-foreground gap-1">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
                         <span>May 2024 - August 2024</span>
                       </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4" />
+                        <span>Visakhapatnam, India</span>
+                      </div>
+                      <a 
+                        href="https://drive.google.com/file/d/1Gq8FQU3VvlE8drmSuLtaPSpz-UD3__Y-/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-xs mt-1"
+                      >
+                        View Certificate →
+                      </a>
                     </div>
                   </div>
 

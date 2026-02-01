@@ -79,7 +79,11 @@ const Hero = () => {
               View Projects
               <ArrowDown className="w-4 h-4" />
             </a>
-            <a href="#contact" className="btn-outline flex items-center gap-2">
+            <a 
+              href="/Pucha_Arun_Kumar_Resume.pdf" 
+              download
+              className="btn-outline flex items-center gap-2"
+            >
               <Download className="w-4 h-4" />
               Download Resume
             </a>
@@ -102,7 +106,7 @@ const Hero = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/arun-kumar-pucha/"
+              href="https://www.linkedin.com/in/arun-kumar-pucha-77aa63293/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
