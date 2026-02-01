@@ -37,7 +37,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Kharagpur, West Bengal, India',
+      value: 'Visakhapatnam, India',
       href: null,
     },
   ];
@@ -51,7 +51,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/arun-kumar-pucha/',
+      href: 'https://www.linkedin.com/in/arun-kumar-pucha-77aa63293/',
     },
   ];
 
