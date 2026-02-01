@@ -109,20 +109,51 @@ const Experience = () => {
           </div>
         </motion.div>
 
-        {/* Looking for opportunities */}
+        {/* Looking for opportunities - Refined */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-4xl mx-auto mt-8"
         >
-          <div className="p-6 rounded-xl bg-gradient-to-r from-primary/10 to-transparent border border-primary/20 text-center">
-            <Briefcase className="w-8 h-8 text-primary mx-auto mb-4" />
-            <h4 className="font-semibold text-lg mb-2">Open to Opportunities</h4>
-            <p className="text-muted-foreground text-sm">
-              Actively seeking full-time AI/ML roles, research positions, and exciting collaborations. 
-              Let's build something impactful together.
-            </p>
+          <div className="p-6 rounded-xl bg-gradient-to-r from-primary/10 to-transparent border border-primary/20">
+            <div className="flex items-start gap-4">
+              <Briefcase className="w-8 h-8 text-primary flex-shrink-0" />
+              <div className="flex-1">
+                <h4 className="font-semibold text-lg mb-3">Open to Opportunities</h4>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <p className="text-sm font-medium text-foreground mb-2">Roles I'm Seeking:</p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• ML Engineer (NLP / CV / GenAI)</li>
+                      <li>• Applied Scientist / Research Engineer</li>
+                      <li>• AI Product Engineer at early-stage startups</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground mb-2">What I Bring:</p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Published research + production experience</li>
+                      <li>• Full-stack ML: data → training → deployment</li>
+                      <li>• Strong fundamentals from IIT Kharagpur</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                    ✓ Available July 2025
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                    Remote / Hybrid / Onsite
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                    India / International
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

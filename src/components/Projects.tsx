@@ -7,38 +7,58 @@ const projects = [
   {
     title: 'AI-Driven 3D Blueprint Generator',
     description: 'End-to-end generative AI pipeline for text-to-3D manufacturing. Published at ICRRCE-2025 (Scopus-indexed).',
-    achievement: 'Automated CAD workflow using FreeCAD and Blender APIs',
+    achievement: 'Automated CAD workflow via FreeCAD + Blender APIs',
+    metrics: [
+      { label: 'Pipeline', value: 'Text → Image → 3D → CAD' },
+      { label: 'Ablation', value: 'NeRF vs 3DGS: 3DGS 2x faster' },
+    ],
     techStack: ['DALL·E 3', 'Stable Diffusion XL', 'Neural Radiance Fields', '3D Gaussian Splatting'],
     featured: true,
     badge: 'Published Research',
   },
   {
     title: 'Retinal Disease Detection System',
-    description: 'Clinical-grade diabetic retinopathy grading with explainable AI using APTOS 2019 real-world dataset.',
-    achievement: '85.45% accuracy, 0.92 Quadratic Weighted Kappa',
+    description: 'Clinical-grade diabetic retinopathy grading with explainable AI. Tested on APTOS 2019 (3,662 real fundus images).',
+    achievement: '85.45% accuracy | 0.92 Quadratic Weighted Kappa',
+    metrics: [
+      { label: 'vs Baseline', value: 'DenseNet alone: 81% → Fusion: 85.45%' },
+      { label: 'Explainability', value: 'Grad-CAM heatmaps for clinicians' },
+    ],
     techStack: ['CLIP', 'DenseNet-121', 'Grad-CAM', 'PyTorch'],
     featured: true,
     badge: 'Medical AI',
   },
   {
     title: 'Skin Disease Classification',
-    description: 'Hybrid CNN with feature fusion and OOD detection across 22 disease classes from 5,000+ images.',
-    achievement: '79.11% accuracy with safety mechanisms',
+    description: 'Hybrid CNN with feature fusion, OOD detection, and uncertainty estimation across 22 dermatological conditions.',
+    achievement: '79.11% accuracy with production safety mechanisms',
+    metrics: [
+      { label: 'Dataset', value: '5,000+ dermoscopy images' },
+      { label: 'Safety', value: 'OOD rejection for unknown conditions' },
+    ],
     techStack: ['ResNet50', 'DenseNet121', 'Grad-CAM', 'TensorFlow'],
     featured: true,
-    badge: 'Healthcare',
+    badge: 'Healthcare AI',
   },
   {
     title: 'Fake News Detection with BERT',
-    description: 'Custom transformer architecture with contextual embeddings trained on Fakeddit (180k+ samples).',
-    achievement: '84% accuracy, 0.83 F1-score',
+    description: 'Custom transformer architecture trained on Fakeddit multimodal dataset (180k+ samples with text + images).',
+    achievement: '84% accuracy | 0.83 F1-score',
+    metrics: [
+      { label: 'Dataset', value: 'Fakeddit: 180k multimodal samples' },
+      { label: 'Approach', value: 'Fine-tuned BERT + contextual embeddings' },
+    ],
     techStack: ['PyTorch', 'BERT', 'Transformers', 'NLP'],
     featured: false,
   },
   {
-    title: 'Code Completion using Residual RNNs',
-    description: 'Enhanced gradient flow using residual connections for improved code prediction.',
-    achievement: '1.22% accuracy improvement, 8.08% perplexity reduction',
+    title: 'Code Completion with Residual RNNs',
+    description: 'Novel architecture combining residual connections with LSTM for improved gradient flow in code prediction.',
+    achievement: '+1.22% accuracy | -8.08% perplexity',
+    metrics: [
+      { label: 'vs Vanilla LSTM', value: 'Perplexity: 45.2 → 41.5' },
+      { label: 'Innovation', value: 'Skip connections between LSTM layers' },
+    ],
     techStack: ['PyTorch', 'RNN', 'LSTM', 'Residual Networks'],
     featured: false,
   },
@@ -97,10 +117,22 @@ const Projects = () => {
               <p className="text-muted-foreground mb-4">{project.description}</p>
 
               {/* Achievement */}
-              <div className="flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/20 mb-6">
+              <div className="flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/20 mb-4">
                 <ChevronRight className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-foreground">{project.achievement}</span>
+                <span className="text-sm text-foreground font-medium">{project.achievement}</span>
               </div>
+
+              {/* Metrics/Ablations */}
+              {project.metrics && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+                  {project.metrics.map((metric) => (
+                    <div key={metric.label} className="p-2 rounded-lg bg-secondary/50 text-xs">
+                      <span className="text-muted-foreground">{metric.label}: </span>
+                      <span className="text-foreground">{metric.value}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-2">
@@ -141,10 +173,21 @@ const Projects = () => {
               <h3 className="text-lg font-bold mb-2">{project.title}</h3>
               <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
               
-              <div className="flex items-center gap-2 text-sm text-primary mb-4">
+              <div className="flex items-center gap-2 text-sm text-primary mb-3">
                 <ChevronRight className="w-4 h-4" />
-                <span>{project.achievement}</span>
+                <span className="font-medium">{project.achievement}</span>
               </div>
+
+              {/* Metrics for non-featured */}
+              {project.metrics && (
+                <div className="space-y-1 mb-4 text-xs">
+                  {project.metrics.map((metric) => (
+                    <div key={metric.label} className="text-muted-foreground">
+                      <span className="text-primary">→</span> {metric.label}: {metric.value}
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <div className="flex flex-wrap gap-2">
                 {project.techStack.map((tech) => (
