@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, MapPin, Phone, Github, Linkedin, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Github, Linkedin, Send, CheckCircle, Trophy } from 'lucide-react';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -15,7 +15,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    const subject = `Portfolio Contact from ${formState.name}`;
+    const body = `Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`;
+    const mailtoLink = `mailto:puchaarunkumar@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
     setFormState({ name: '', email: '', message: '' });
@@ -52,6 +55,11 @@ const Contact = () => {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/arun-kumar-pucha-77aa63293/',
+    },
+    {
+      icon: Trophy,
+      label: 'Kaggle',
+      href: 'https://www.kaggle.com/arunkumarpucha',
     },
   ];
 
