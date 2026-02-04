@@ -49,7 +49,9 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="https://drive.google.com/file/d/1XPzZYh36JdW6TYwBxejumW8zbSUeiEuk/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary flex items-center gap-2 text-sm py-2"
             >
               <Download className="w-4 h-4" />
@@ -89,7 +91,9 @@ const Navbar = () => {
                   </a>
                 ))}
                 <a
-                  href="#contact"
+                  href="https://drive.google.com/file/d/1XPzZYh36JdW6TYwBxejumW8zbSUeiEuk/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   className="btn-primary flex items-center justify-center gap-2 mt-4"
                 >
