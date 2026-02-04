@@ -61,6 +61,11 @@ const Contact = () => {
       label: 'Kaggle',
       href: 'https://www.kaggle.com/arunkumarpucha',
     },
+    {
+      icon: Mail,
+      label: 'Email',
+      href: 'mailto:puchaarunkumar@gmail.com',
+    },
   ];
 
   return (
