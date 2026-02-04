@@ -80,8 +80,9 @@ const Hero = () => {
               <ArrowDown className="w-4 h-4" />
             </a>
             <a 
-              href="/Pucha_Arun_Kumar_Resume.pdf" 
-              download
+              href="https://drive.google.com/file/d/1XPzZYh36JdW6TYwBxejumW8zbSUeiEuk/view?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline flex items-center gap-2"
             >
               <Download className="w-4 h-4" />

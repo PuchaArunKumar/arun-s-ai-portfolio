@@ -141,6 +141,10 @@ const Experience = () => {
                   </div>
                 </div>
 
+                <p className="text-sm text-muted-foreground mb-4">
+                  📧 puchaarunkumar@gmail.com
+                </p>
+
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                     ✓ Available July 2025
