@@ -141,9 +141,12 @@ const Experience = () => {
                   </div>
                 </div>
 
-                <p className="text-sm text-muted-foreground mb-4">
+                <a 
+                  href="mailto:puchaarunkumar@gmail.com" 
+                  className="inline-flex items-center gap-2 text-sm text-primary hover:underline mb-4"
+                >
                   📧 puchaarunkumar@gmail.com
-                </p>
+                </a>
 
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
