@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Download, Trophy } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -114,6 +114,15 @@ const Hero = () => {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.kaggle.com/arunkumarpucha"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-secondary border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+              aria-label="Kaggle"
+            >
+              <Trophy className="w-5 h-5" />
             </a>
             <a
               href="mailto:puchaarunkumar@gmail.com"
