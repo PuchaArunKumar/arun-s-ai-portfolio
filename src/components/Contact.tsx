@@ -1,11 +1,28 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Mail, MapPin, Phone, Github, Linkedin, Send, Trophy } from 'lucide-react';
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const openGmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    const to = "puchaarunkumar@gmail.com";
+    const subject = encodeURIComponent(`Message from Portfolio - ${formState.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`
+    );
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+    window.open(gmailURL, "_blank");
+    setFormState({ name: '', email: '', message: '' });
+  };
 
   const contactInfo = [
     {
@@ -141,12 +158,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <form 
-              action="mailto:puchaarunkumar@gmail.com" 
-              method="POST" 
-              encType="text/plain"
-              className="p-8 rounded-xl bg-card border border-border"
-            >
+            <form onSubmit={openGmail} className="p-8 rounded-xl bg-card border border-border">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -155,7 +167,8 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    name="Name"
+                    value={formState.name}
+                    onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                     placeholder="Your name"
@@ -169,7 +182,8 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    name="Email"
+                    value={formState.email}
+                    onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                     placeholder="your@email.com"
@@ -182,7 +196,8 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
-                    name="Message"
+                    value={formState.message}
+                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
