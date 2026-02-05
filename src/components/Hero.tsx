@@ -125,7 +125,9 @@ const Hero = () => {
               <Trophy className="w-5 h-5" />
             </a>
             <a
-              href="mailto:puchaarunkumar@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=puchaarunkumar@gmail.com&su=Message%20from%20Portfolio%20Website&body=Name%3A%0AEmail%3A%0AMessage%3A%0A"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
               aria-label="Email"
             >
