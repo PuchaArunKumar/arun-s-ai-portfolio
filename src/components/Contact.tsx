@@ -1,28 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Mail, MapPin, Phone, Github, Linkedin, Send, CheckCircle, Trophy } from 'lucide-react';
+import { useRef } from 'react';
+import { Mail, MapPin, Phone, Github, Linkedin, Send, Trophy } from 'lucide-react';
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = `Portfolio Contact from ${formState.name}`;
-    const body = `Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`;
-    const mailtoLink = `mailto:puchaarunkumar@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-    setFormState({ name: '', email: '', message: '' });
-  };
 
   const contactInfo = [
     {
@@ -158,7 +141,12 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <form onSubmit={handleSubmit} className="p-8 rounded-xl bg-card border border-border">
+            <form 
+              action="mailto:puchaarunkumar@gmail.com" 
+              method="POST" 
+              encType="text/plain"
+              className="p-8 rounded-xl bg-card border border-border"
+            >
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -167,8 +155,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    value={formState.name}
-                    onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                    name="Name"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                     placeholder="Your name"
@@ -182,8 +169,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    value={formState.email}
-                    onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                    name="Email"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                     placeholder="your@email.com"
@@ -196,8 +182,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
-                    value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                    name="Message"
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
@@ -207,20 +192,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitted}
-                  className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full btn-primary flex items-center justify-center gap-2"
                 >
-                  {isSubmitted ? (
-                    <>
-                      <CheckCircle className="w-5 h-5" />
-                      Message Sent!
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      Send Message
-                    </>
-                  )}
+                  <Send className="w-5 h-5" />
+                  Send Message
                 </button>
               </div>
             </form>
