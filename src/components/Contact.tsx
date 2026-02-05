@@ -64,7 +64,7 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:puchaarunkumar@gmail.com',
+      href: 'https://mail.google.com/mail/?view=cm&fs=1&to=puchaarunkumar@gmail.com',
     },
   ];
 
