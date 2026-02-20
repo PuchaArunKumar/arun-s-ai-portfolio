@@ -5,6 +5,7 @@ import About from '@/components/About';
 import ResearchPhilosophy from '@/components/ResearchPhilosophy';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
+import AbiliversePitch from '@/components/AbiliversePitch';
 import MLProduction from '@/components/MLProduction';
 import Experience from '@/components/Experience';
 import Publications from '@/components/Publications';
@@ -23,6 +24,7 @@ const Index = () => {
         <ResearchPhilosophy />
         <Skills />
         <Projects />
+        <AbiliversePitch />
         <MLProduction />
         <Experience />
         <Publications />
