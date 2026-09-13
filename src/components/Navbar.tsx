@@ -52,7 +52,7 @@ const Navbar = () => {
             ))}
             <ThemeToggle />
             <a
-              href="https://drive.google.com/file/d/1XPzZYh36JdW6TYwBxejumW8zbSUeiEuk/view?usp=sharing"
+              href="https://drive.google.com/file/d/1kVWQbNOb9Y_d1s4M69ZXnpxNp7epa4RS/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex items-center gap-2 text-sm py-2"
@@ -97,7 +97,7 @@ const Navbar = () => {
                   </a>
                 ))}
                 <a
-                  href="https://drive.google.com/file/d/1XPzZYh36JdW6TYwBxejumW8zbSUeiEuk/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1kVWQbNOb9Y_d1s4M69ZXnpxNp7epa4RS/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}

@@ -80,7 +80,7 @@ const Hero = () => {
               <ArrowDown className="w-4 h-4" />
             </a>
             <a 
-              href="https://drive.google.com/file/d/1XPzZYh36JdW6TYwBxejumW8zbSUeiEuk/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1kVWQbNOb9Y_d1s4M69ZXnpxNp7epa4RS/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline flex items-center gap-2"
