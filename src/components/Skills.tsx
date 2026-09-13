@@ -8,25 +8,21 @@ const skillCategories = [
     icon: Code,
     title: 'Programming & Frameworks',
     skills: ['Python', 'PyTorch', 'TensorFlow', 'Scikit-learn', 'Keras', 'Hugging Face'],
-    color: 'from-teal-400 to-cyan-400',
   },
   {
     icon: Brain,
     title: 'ML Expertise',
     skills: ['Deep Learning', 'NLP', 'Computer Vision', 'Neural Networks', 'Model Optimization', 'Transformers'],
-    color: 'from-primary to-teal-300',
   },
   {
     icon: Database,
     title: 'Data Science',
     skills: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'EDA', 'Data Preprocessing'],
-    color: 'from-cyan-400 to-blue-400',
   },
   {
     icon: Settings,
     title: 'MLOps & Tools',
     skills: ['FastAPI', 'MLflow', 'Docker', 'SQL', 'Vector Databases', 'Git', 'Azure'],
-    color: 'from-blue-400 to-indigo-400',
   },
 ];
 
@@ -35,7 +31,7 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="skills" className="section-padding bg-card/30" ref={ref}>
+    <section id="skills" className="section-padding bg-card border-y border-border" ref={ref}>
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,10 +62,8 @@ const Skills = () => {
             >
               {/* Header */}
               <div className="flex items-center gap-4 mb-6">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.color} p-0.5`}>
-                  <div className="w-full h-full rounded-[7px] bg-card flex items-center justify-center">
-                    <category.icon className="w-5 h-5 text-primary" />
-                  </div>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <category.icon className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="font-semibold text-xl">{category.title}</h3>
               </div>

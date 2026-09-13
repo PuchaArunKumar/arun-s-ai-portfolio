@@ -114,14 +114,14 @@ const About = () => {
                   <span className="text-primary font-medium">CGPA: 7.48</span>
                 </div>
                 <div className="h-2 rounded-full bg-secondary overflow-hidden">
-                  <div className="h-full w-[74.8%] rounded-full bg-gradient-to-r from-primary to-teal-300" />
+                  <div className="h-full w-[74.8%] rounded-full bg-primary" />
                 </div>
                 <div className="flex justify-between items-center mt-4">
                   <span className="text-muted-foreground">B.Tech - GVP College</span>
                   <span className="text-primary font-medium">CGPA: 8.37</span>
                 </div>
                 <div className="h-2 rounded-full bg-secondary overflow-hidden">
-                  <div className="h-full w-[83.7%] rounded-full bg-gradient-to-r from-primary to-teal-300" />
+                  <div className="h-full w-[83.7%] rounded-full bg-primary" />
                 </div>
               </div>
             </div>

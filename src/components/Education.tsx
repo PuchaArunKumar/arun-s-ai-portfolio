@@ -29,7 +29,7 @@ const Education = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="education" className="section-padding bg-card/30" ref={ref}>
+    <section id="education" className="section-padding bg-card border-y border-border" ref={ref}>
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

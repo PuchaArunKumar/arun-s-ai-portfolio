@@ -33,7 +33,7 @@ const Publications = () => {
             className="relative p-8 rounded-xl bg-card border border-border overflow-hidden"
           >
             {/* Decorative gradient */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-teal-300 to-cyan-400" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-primary" />
             
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">

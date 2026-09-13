@@ -47,7 +47,7 @@ const MLProduction = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="section-padding bg-card/30" ref={ref}>
+    <section className="section-padding bg-card border-y border-border" ref={ref}>
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ const MLProduction = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 p-6 rounded-xl bg-gradient-to-r from-primary/10 to-transparent border border-primary/20"
+          className="mt-12 p-6 rounded-xl bg-gradient-to-r from-primary/[0.06] to-transparent border border-primary/20"
         >
           <blockquote className="text-center">
             <p className="text-lg italic text-foreground mb-2">

@@ -8,7 +8,7 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="experience" className="section-padding bg-card/30" ref={ref}>
+    <section id="experience" className="section-padding bg-card border-y border-border" ref={ref}>
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ const Experience = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-4xl mx-auto mt-8"
         >
-          <div className="p-6 rounded-xl bg-gradient-to-r from-primary/10 to-transparent border border-primary/20">
+          <div className="p-6 rounded-xl bg-gradient-to-r from-primary/[0.06] to-transparent border border-primary/20">
             <div className="flex items-start gap-4">
               <Briefcase className="w-8 h-8 text-primary flex-shrink-0" />
               <div className="flex-1">

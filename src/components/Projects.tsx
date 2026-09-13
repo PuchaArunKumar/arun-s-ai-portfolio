@@ -150,10 +150,10 @@ const Projects = () => {
               <motion.div
                 className="absolute -inset-px rounded-xl opacity-0 pointer-events-none"
                 animate={{
-                  opacity: hoveredIndex === index ? 0.1 : 0,
+                  opacity: hoveredIndex === index ? 0.04 : 0,
                 }}
                 style={{
-                  background: 'linear-gradient(135deg, hsl(174 72% 46%), hsl(199 89% 48%))',
+                  background: 'var(--gradient-primary)',
                 }}
               />
             </motion.div>

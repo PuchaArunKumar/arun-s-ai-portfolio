@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart, Trophy } from 'lucide-react';
+import { Github, Linkedin, Mail, Trophy } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -75,7 +75,7 @@ const Footer = () => {
         {/* Made with love */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-            Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> using React & Tailwind CSS
+            Built with React, TypeScript & Tailwind CSS
           </p>
         </div>
       </div>

@@ -2,75 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Dark Navy/Teal Theme */
+/* Portfolio Design System - Professional Slate/Navy Theme */
 /* Fonts (Inter, JetBrains Mono) are loaded via <link> in index.html */
 
 @layer base {
+  /* Light (default): white & slate neutrals with a deep navy accent */
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 174 72% 46%;
-    --primary-foreground: 222 47% 6%;
+    --primary: 224 64% 33%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 30% 14%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 214 32% 95%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 222 30% 12%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 214 32% 95%;
+    --muted-foreground: 215 19% 35%;
 
-    --accent: 174 72% 46%;
-    --accent-foreground: 222 47% 6%;
+    --accent: 214 60% 95%;
+    --accent-foreground: 224 64% 33%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 174 72% 46%;
+    --border: 214 32% 90%;
+    --input: 214 32% 90%;
+    --ring: 224 64% 33%;
 
     --radius: 0.75rem;
 
     /* Custom Portfolio Variables */
-    --gradient-primary: linear-gradient(135deg, hsl(174 72% 46%), hsl(199 89% 48%));
-    --gradient-secondary: linear-gradient(135deg, hsl(222 47% 12%), hsl(222 47% 18%));
-    --gradient-hero: linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(222 47% 4%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(222 47% 10%), hsl(222 47% 8%));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(174 72% 46% / 0.15) 0%, transparent 70%);
-    
-    --shadow-glow: 0 0 60px hsl(174 72% 46% / 0.2);
-    --shadow-card: 0 4px 24px hsl(222 47% 2% / 0.4);
-    --shadow-elevated: 0 8px 32px hsl(222 47% 2% / 0.6);
+    --gradient-primary: linear-gradient(135deg, hsl(222 47% 18%), hsl(224 64% 38%));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 33% 98%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(224 64% 45% / 0.08) 0%, transparent 70%);
 
-    --navy-50: 222 47% 95%;
-    --navy-100: 222 47% 85%;
-    --navy-200: 222 47% 70%;
-    --navy-300: 222 47% 55%;
-    --navy-400: 222 47% 40%;
-    --navy-500: 222 47% 25%;
-    --navy-600: 222 47% 18%;
-    --navy-700: 222 47% 12%;
-    --navy-800: 222 47% 8%;
-    --navy-900: 222 47% 4%;
-
-    --teal-50: 174 72% 95%;
-    --teal-100: 174 72% 85%;
-    --teal-200: 174 72% 70%;
-    --teal-300: 174 72% 56%;
-    --teal-400: 174 72% 46%;
-    --teal-500: 174 72% 36%;
-    --teal-600: 174 72% 26%;
+    --shadow-glow: 0 0 0 1px hsl(224 64% 33% / 0.08);
+    --shadow-card: 0 1px 3px hsl(222 47% 11% / 0.06), 0 1px 2px hsl(222 47% 11% / 0.04);
+    --shadow-elevated: 0 12px 32px -8px hsl(222 47% 11% / 0.14);
   }
 
+  /* Dark: muted slate with a soft blue accent */
   .dark {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 222 28% 7%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 24% 10%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 24% 10%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 215 80% 68%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 222 20% 15%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 222 20% 14%;
+    --muted-foreground: 215 20% 68%;
+
+    --accent: 222 20% 15%;
+    --accent-foreground: 210 40% 96%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 18% 20%;
+    --input: 222 18% 20%;
+    --ring: 215 80% 68%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 40% 96%), hsl(215 80% 72%));
+    --gradient-hero: linear-gradient(180deg, hsl(222 26% 9%) 0%, hsl(222 28% 6%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(215 80% 60% / 0.10) 0%, transparent 70%);
+
+    --shadow-glow: 0 0 0 1px hsl(215 80% 68% / 0.12);
+    --shadow-card: 0 1px 3px hsl(222 47% 2% / 0.4);
+    --shadow-elevated: 0 12px 32px -8px hsl(222 47% 2% / 0.6);
   }
 }
 
@@ -128,10 +142,12 @@
 
   .card-hover {
     @apply transition-all duration-300 ease-out;
+    box-shadow: var(--shadow-card);
   }
 
   .card-hover:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
+    border-color: hsl(var(--primary) / 0.25);
     box-shadow: var(--shadow-elevated), var(--shadow-glow);
   }
 
@@ -149,7 +165,7 @@
   }
 
   .skill-tag:hover {
-    @apply border-primary/50 text-foreground bg-primary/10;
+    @apply border-primary/40 text-primary bg-primary/5;
   }
 
   .nav-link {
@@ -159,20 +175,25 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground font-medium px-6 py-3 rounded-lg
-           transition-all duration-300 hover:shadow-lg hover:shadow-primary/25
-           hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-primary text-primary-foreground font-medium px-6 py-3 rounded-lg shadow-sm
+           transition-all duration-200 hover:bg-primary/90 hover:shadow-md
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
   .btn-outline {
-    @apply border border-border text-foreground font-medium px-6 py-3 rounded-lg
-           transition-all duration-300 hover:border-primary/50 hover:bg-primary/10
-           hover:scale-[1.02] active:scale-[0.98];
+    @apply border border-border bg-card text-foreground font-medium px-6 py-3 rounded-lg
+           transition-all duration-200 hover:border-primary/40 hover:text-primary
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
   .project-card {
     @apply relative overflow-hidden rounded-xl bg-card border border-border
            transition-all duration-300 hover:border-primary/30;
+    box-shadow: var(--shadow-card);
+  }
+
+  .project-card:hover {
+    box-shadow: var(--shadow-elevated);
   }
 
   .project-card::before {
