@@ -36,9 +36,8 @@ export const hero = {
     'I’m Arun, an M.Tech student in Artificial Intelligence, working mostly on medical AI — where a confident wrong answer is the expensive kind. My thesis, still in progress, is a clinical decision-support system designed to rank diagnoses from three kinds of evidence, say how sure it is, and defer to a clinician when it isn’t sure enough.',
     'Before that: medical imaging models, benchmarks of retrieval for medical question answering, language models for legal contracts, and a text-to-CAD pipeline that began as my ICRRCE 2025 paper.',
   ],
-  photo: {
-    alt: 'Pucha Arun Kumar standing on a beach with hands in pockets, waves breaking behind.',
-    caption: 'Fig. 1 — Pucha Arun Kumar.',
+  portrait: {
+    label: 'Portrait of Pucha Arun Kumar, drawn in dots',
   },
   facts: [
     { key: 'Now', value: 'M.Tech in Artificial Intelligence, IIT Kharagpur (2025–2027)' },
