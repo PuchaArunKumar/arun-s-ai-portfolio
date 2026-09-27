@@ -1,19 +1,26 @@
-import { Moon, Sun } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-const ThemeToggle = ({ className = '' }: { className?: string }) => {
+// Text toggle rather than an icon: it names the theme you will switch to.
+const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();
-  const isDark = resolvedTheme === 'dark';
+  const [mounted, setMounted] = useState(false);
+
+  // next-themes only knows the resolved theme after hydration.
+  useEffect(() => setMounted(true), []);
+
+  const isDark = mounted && resolvedTheme === 'dark';
+  const next = isDark ? 'light' : 'dark';
 
   return (
     <button
       type="button"
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className={`p-2 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors ${className}`}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={isDark ? 'Light mode' : 'Dark mode'}
+      onClick={() => setTheme(next)}
+      className="ed-action no-print"
+      aria-label={`Switch to ${next} theme`}
     >
-      {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+      <span aria-hidden="true">{isDark ? '○' : '●'}</span>
+      <span className="ed-action-label">{isDark ? 'Light' : 'Dark'}</span>
     </button>
   );
 };

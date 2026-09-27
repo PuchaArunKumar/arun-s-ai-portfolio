@@ -1,0 +1,25 @@
+{
+  "redirects": [
+    {
+      "source": "/Pucha_Arun_Kumar_Resume.pdf",
+      "destination": "https://drive.google.com/file/d/1kVWQbNOb9Y_d1s4M69ZXnpxNp7epa4RS/view?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/resume",
+      "destination": "https://drive.google.com/file/d/1kVWQbNOb9Y_d1s4M69ZXnpxNp7epa4RS/view?usp=sharing",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ]
+}
