@@ -37,7 +37,7 @@ export const hero = {
     'Before that: medical imaging models, benchmarks of retrieval for medical question answering, language models for legal contracts, and a text-to-CAD pipeline that began as my ICRRCE 2025 paper.',
   ],
   portrait: {
-    label: 'Portrait of Pucha Arun Kumar, drawn as a 3D point cloud',
+    label: 'Portrait of Pucha Arun Kumar, drawn in dots',
   },
   facts: [
     { key: 'Now', value: 'M.Tech in Artificial Intelligence, IIT Kharagpur (2025–2027)' },
