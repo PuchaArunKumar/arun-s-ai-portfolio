@@ -227,3 +227,42 @@ export const contact = {
     { key: 'Résumé', value: 'One page, PDF', href: person.resume },
   ],
 };
+
+/*
+  The site is three pages side by side: the portfolio, Abilitiverse running
+  live, and the Opportunity Radar. The bar at the top moves between them.
+*/
+export const spaces = [
+  { num: '01', label: 'Portfolio', short: 'Portfolio', to: '/', title: 'Pucha Arun Kumar — Machine Learning Engineer' },
+  { num: '02', label: 'Abilitiverse', short: 'Abilitiverse', to: '/abilitiverse', title: 'Abilitiverse, live — Pucha Arun Kumar' },
+  { num: '03', label: 'Opportunity Radar', short: 'Radar', to: '/radar', title: 'Opportunity Radar — Pucha Arun Kumar' },
+] as const;
+
+export const abilitiverseLive = {
+  label: '02 · Live prototype',
+  title: 'Abilitiverse',
+  intro: 'The assistive-technology community I am building, running live below.',
+  note: 'This is the hosted prototype, embedded as it is. Some sections are still being set up, and Google sign-in works only on the full site.',
+  frameTitle: 'Abilitiverse, the live prototype',
+  url: 'https://abiliverse-connect.lovable.app/',
+  links: [
+    { label: 'Open the full site', href: 'https://abiliverse-connect.lovable.app/' },
+    { label: 'Code', href: 'https://github.com/PuchaArunKumar/abiliverse-connect' },
+  ] satisfies Link[],
+};
+
+export const radar = {
+  label: 'Opportunity Radar',
+  heading: { before: 'What is open in ', emphasis: 'assistive technology.' },
+  intro: 'Every Monday a scheduled Claude agent I set up searches for assistive-technology jobs, events and funding calls, opens each link to check it is still open, and publishes the list. The same feed runs the Radar page on Abilitiverse.',
+  caveat: 'It can still get details wrong, so check the organiser’s page before you apply.',
+  feedUrl: 'https://puchaarunkumar.github.io/abiliverse-connect/radar-community.json',
+  links: [{ label: 'The Radar on Abilitiverse', href: 'https://puchaarunkumar.github.io/abiliverse-connect/radar' }] satisfies Link[],
+  groups: [
+    { kind: 'job', heading: 'Jobs', empty: 'No open jobs this week.' },
+    { kind: 'event', heading: 'Events and deadlines', empty: 'No upcoming events this week.' },
+    { kind: 'grant', heading: 'Funding and programmes', empty: 'No open funding calls this week.' },
+  ],
+  empty: 'The first weekly list has not been published yet. It updates every Monday morning, India time.',
+  error: 'The radar could not be loaded just now.',
+};

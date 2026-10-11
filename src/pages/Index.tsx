@@ -8,11 +8,9 @@ import Toolkit from '@/components/site/Toolkit';
 import Contact from '@/components/site/Contact';
 import Footer from '@/components/site/Footer';
 
+// The skip link lives in the Spaces layout, ahead of the page bar.
 const Index = () => (
   <>
-    <a href="#main" className="skip-link">
-      Skip to content
-    </a>
     <Header />
     <main id="main" tabIndex={-1} className="outline-none">
       <Hero />
