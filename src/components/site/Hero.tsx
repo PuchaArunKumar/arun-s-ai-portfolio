@@ -1,36 +1,6 @@
 import { hero, person } from '@/content/site';
 import { Accent, ExtLink } from './primitives';
-
-// Desktop shows a 4:5 portrait beside the headline; narrower screens get a
-// wider 4:3 crop that keeps the sea in frame.
-const Portrait = () => (
-  <figure className="hero-figure enter delay-2">
-    <picture>
-      <source
-        media="(min-width: 1040px)"
-        type="image/webp"
-        srcSet="/images/arun-portrait-480.webp 480w, /images/arun-portrait-832.webp 832w, /images/arun-portrait-1200.webp 1200w"
-        sizes="24rem"
-      />
-      <source media="(min-width: 1040px)" srcSet="/images/arun-portrait-832.jpg" />
-      <source
-        type="image/webp"
-        srcSet="/images/arun-coast-640.webp 640w, /images/arun-coast-1024.webp 1024w, /images/arun-coast-1600.webp 1600w"
-        sizes="100vw"
-      />
-      <img
-        src="/images/arun-coast-1024.jpg"
-        width={1024}
-        height={768}
-        alt={hero.photo.alt}
-        className="hero-photo"
-        decoding="async"
-        {...{ fetchpriority: 'high' }}
-      />
-    </picture>
-    <figcaption className="hero-caption">{hero.photo.caption}</figcaption>
-  </figure>
-);
+import DotPortrait from './DotPortrait';
 
 const Hero = () => (
   <section id="top" aria-labelledby="hero-h" className="gutter">
@@ -43,7 +13,7 @@ const Hero = () => (
         {hero.subhead}
       </p>
 
-      <Portrait />
+      <DotPortrait className="hero-portrait" label={hero.portrait.label} />
 
       <div className="hero-intro intro-text enter delay-2 mt-[clamp(28px,5vw,44px)] space-y-4">
         {hero.intro.map((line) => (

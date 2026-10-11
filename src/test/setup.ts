@@ -13,3 +13,6 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: () => {},
   }),
 });
+
+// jsdom has no canvas; the dot portrait skips drawing when there is no context.
+HTMLCanvasElement.prototype.getContext = () => null;

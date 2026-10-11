@@ -11,6 +11,10 @@
       "permanent": false
     }
   ],
+  "rewrites": [
+    { "source": "/abilitiverse", "destination": "/index.html" },
+    { "source": "/radar", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
